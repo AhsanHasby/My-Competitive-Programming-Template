@@ -8,22 +8,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// =================== Typedefs ===================
+// Typedefs
 using ll   = long long;
 using ull  = unsigned long long;
 using str  = string;
 using vin  = vector<int>;
 using vll  = vector<ll>;
-// =================== Constants ===================
+// Constants
 const char endL = '\n';
 const int  IMAX  = 1e9;
 const ll   LMAX  = 1e18;
 const ll   MOD  = (1e9+7); //if given
-// =================== Fast IO ===================
+// Fast IO
 #define WAKE    ios_base::sync_with_stdio(false);
 #define UP_TO   cin.tie(nullptr);
 #define REALITY cout.tie(nullptr);
-// =================== Macros ===================
+// Macros
 #define all(x)  (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define sz(x)   (int)(x.size())
@@ -34,7 +34,8 @@ const ll   MOD  = (1e9+7); //if given
 #define print(arr) for(auto &it:(arr)) cout << it << " "; cout << endL;
 #define YES     cout << "YES\n"
 #define NO      cout << "NO\n"
-//================= MAIN CODE ===============
+
+//==========(->MAIN CODE<-)==========
 
 bool UniversalPull() {
 
@@ -43,7 +44,6 @@ bool UniversalPull() {
 
 void DomainExpansion() {
     
-
 
 }
 
