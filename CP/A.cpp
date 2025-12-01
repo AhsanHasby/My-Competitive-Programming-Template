@@ -11,7 +11,6 @@ using namespace std;
 // Typedefs
 using ll   = long long;
 using ull  = unsigned long long;
-using str  = string;
 using vin  = vector<int>;
 using vll  = vector<ll>;
 // Constants
