@@ -1,10 +1,3 @@
-/*
-██████╗░██╗░██████╗███╗░░░███╗██╗██╗░░░░░██╗░░░░░░█████╗░██╗░░██╗
-██╔══██╗██║██╔════╝████╗░████║██║██║░░░░░██║░░░░░██╔══██╗██║░░██║
-██████╦╝██║╚█████╗░██╔████╔██║██║██║░░░░░██║░░░░░███████║███████║
-██╔══██╗██║░╚═══██╗██║╚██╔╝██║██║██║░░░░░██║░░░░░██╔══██║██╔══██║
-██████╦╝██║██████╔╝██║░╚═╝░██║██║███████╗███████╗██║░░██║██║░░██║
-╚═════╝░╚═╝╚═════╝░╚═╝░░░░░╚═╝╚═╝╚══════╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝*/
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -17,9 +10,9 @@ using vll  = vector<ll>;
 const char endL = '\n';
 const ll   MOD  = (1e9+7); //if given
 // Fast IO
-#define WAKE    ios_base::sync_with_stdio(false);
-#define UP_TO   cin.tie(nullptr);
-#define REALITY cout.tie(nullptr);
+#define NAH    ios_base::sync_with_stdio(false);
+#define I_D   cin.tie(nullptr);
+#define WIN cout.tie(nullptr);
 // Macros
 #define all(x)  (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
@@ -34,33 +27,26 @@ const ll   MOD  = (1e9+7); //if given
 
 //==========(->MAIN CODE<-)==========
 
-bool UniversalPull() {
+void Gear2() {
 
-    return true; 
-}
-
-void DomainExpansion() {
     
-
 }
 
-// Bismillah...
 int main() {
-    WAKE UP_TO REALITY
+    NAH I_D WIN
 
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
+    // #ifndef ONLINE_JUDGE
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    // #endif
     
     //test cases
     int test = 1;
     cin >> test;
-    //cin.ignore();
 
     for(int i = 1; i <= test; i++) {
         //cout << "Case " << i <<": ";
-        DomainExpansion();
+        Gear2();
     }
     return 0;
 }
