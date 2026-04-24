@@ -16,7 +16,6 @@ const ll   MOD  = (1e9+7); //if given
 // Macros
 #define all(x)  (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
-#define sz(x)   (int)(x.size())
 #define eb       emplace_back //try_emplace(1 insrt)
 
 #define Unique(x) x.erase(unique(all(x)), x.end())
