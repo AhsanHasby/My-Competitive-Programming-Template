@@ -4,11 +4,9 @@ using namespace std;
 // Typedefs
 using ll   = long long;
 using ull  = unsigned long long;
-using vin  = vector<int>;
-using vll  = vector<ll>;
 // Constants
 const char endL = '\n';
-const ll   MOD  = (1e9+7); //if given
+const ll   MOD  = (1e9+7);
 // Fast IO
 #define NAH    ios_base::sync_with_stdio(false);
 #define I_D   cin.tie(nullptr);
@@ -16,7 +14,7 @@ const ll   MOD  = (1e9+7); //if given
 // Macros
 #define all(x)  (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
-#define eb       emplace_back //try_emplace(1 insrt)
+#define eb       emplace_back
 
 #define Unique(x) x.erase(unique(all(x)), x.end())
 
