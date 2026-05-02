@@ -21,6 +21,9 @@ const ll   MOD  = (1e9+7);
 #define print(arr) for(auto &it:(arr)) cout << it << " "; cout << endL;
 #define YES     cout << "YES\n"
 #define NO      cout << "NO\n"
+// dv 
+int dx[] = {-1, 1, 0, 0};
+int dy[] = {0, 0, -1, 1};
 
 //==========(->MAIN CODE<-)==========
 
