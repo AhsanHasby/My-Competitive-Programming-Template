@@ -1,0 +1,65 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+// Typedefs
+using ll   = long long;
+using ull  = unsigned long long;
+// Constants
+const char endL = '\n';
+const ll   MOD  = (1e9+7);
+// Fast IO
+#define NAH    ios_base::sync_with_stdio(false);
+#define I_D   cin.tie(nullptr);
+#define WIN cout.tie(nullptr);
+// Macros
+#define all(x)  (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define eb       emplace_back
+
+#define Unique(x) x.erase(unique(all(x)), x.end())
+
+#define f(X, Y, Z) for(int i = (X); i < (Y); i += (Z))
+#define print(arr) for(auto &it:(arr)) cout << it << " "; cout << endL;
+#define yes     cout << "YES\n"
+#define no      cout << "NO\n"
+// dv 
+int dx[] = {-1, 1, 0, 0};
+int dy[] = {0, 0, -1, 1};
+
+//==========(->MAIN CODE<-)==========
+
+void Gear2() {
+    ll n, k, m;
+    cin >> n >> k >> m;
+
+    if(k > m) {
+        no; return;
+    }
+
+    yes;
+    f(1, n-k+1, 1) cout << 1 << " ";
+    f(1, k, 1) {
+        cout << 1 << " ";
+        --m;
+    }
+    cout << m << endL;
+}
+
+int main() {
+    NAH I_D WIN
+
+    // #ifndef ONLINE_JUDGE
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    // #endif
+    
+    //test cases
+    int test = 1;
+    cin >> test;
+
+    for(int i = 1; i <= test; i++) {
+        //cout << "Case " << i <<": ";
+        Gear2();
+    }
+    return 0;
+}
