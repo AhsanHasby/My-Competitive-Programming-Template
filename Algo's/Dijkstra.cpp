@@ -1,69 +1,88 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-#define ll long long
-const int N = 2e5 + 5;
+// Typedefs
+using ll   = long long;
+using ull  = unsigned long long;
+// Constants
+const char endL = '\n';
+const ll   MOD  = (1e9+7);
+const ll   INF  = 1e18; // Infinity for initial distances
 
-int n, m;
-ll dis[N];
-vector<pair<int,ll>> adj[N];
-bool vis[N];
+// Fast IO
+#define NAH   ios_base::sync_with_stdio(false);
+#define I_D   cin.tie(nullptr);
+#define WIN   cout.tie(nullptr);
 
-void dijkstra(int start)
-{
-    priority_queue<
-        pair<ll,int>,
-        vector<pair<ll,int>>,
-        greater<pair<ll,int>>
-    > pq;
+//==========(->MAIN CODE<-)==========
 
-    pq.push({0, start});
+void dijkstra(ll src, vector<vector<pair<ll, ll>>> &adj, ll V) {
+    vector<ll> dist(V + 1, INF);
+    set<pair<ll, ll>> st; 
+    
+    dist[src] = 0;
+    st.insert({0, src}); // {dist, node}
+    
+    while (!st.empty()) {
+        auto it = st.begin();
+        ll curr_dist = it->first;
+        ll curr = it->second;
+        st.erase(it); // Remove it (increment-type[don't need it++])
 
-    while(!pq.empty())
-    {
-        auto p = pq.top();
-        pq.pop();
+        for(auto &edge : adj[curr]) {
+            ll neigh = edge.first;
+            ll weight = edge.second;
 
-        ll cost = p.first;
-        int node = p.second;
+            // Relaxation
+            if (dist[curr] + weight < dist[neigh]) {
+                if (dist[neigh] != INF) {
+                    st.erase({dist[neigh], neigh});
+                }
 
-        if(vis[node]) continue;
-
-        vis[node] = true;
-        dis[node] = cost;
-
-        for(auto [next, weight] : adj[node])
-        {
-            if(!vis[next])
-            {
-                pq.push({cost + weight, next});
+                dist[neigh] = dist[curr] + weight;
+                st.insert({dist[neigh], neigh});
             }
         }
     }
+    
+    // Print the shortest distances from the source
+    cout << "Shortest distances from node " << src << ":" << endL;
+    for (int i = 0; i < V; ++i) { 
+        if (dist[i] == INF) cout << "INF ";
+        else cout << dist[i] << " ";
+    }
+    cout << endL;
 }
 
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+void graph () {
+    ll V, E;
+    cin >> V >> E;
 
-    cin >> n >> m;
-
-    for(int i = 0; i < m; i++)
-    {
-        int u, v;
-        ll w;
+    // Adjacency list {neighbor, weight}
+    vector<vector<pair<ll, ll>>> adj(V + 1);
+    for (int i = 0; i < E; ++i) {
+        ll u, v, w;
         cin >> u >> v >> w;
         adj[u].push_back({v, w});
+        adj[v].push_back({u, w}); // Undirected-weighted graph
     }
+    
+    ll src;
+    cin >> src; // source node for Dijkstra
+    
+    dijkstra(src, adj, V);
+}
 
-    dijkstra(1);
+int main() {
+    NAH I_D WIN
 
-    for(int i = 1; i <= n; i++)
-    {
-        if(vis[i])
-            cout << dis[i] << " ";
-        else
-            cout << -1 << " ";
+    //test cases
+    int test = 1;
+    cin >> test;
+
+    for(int i = 1; i <= test; i++) {
+        //cout << "Case " << i <<":\n";
+        graph();
     }
+    return 0;
 }
