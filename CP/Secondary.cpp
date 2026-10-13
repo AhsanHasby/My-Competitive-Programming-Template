@@ -18,7 +18,6 @@ const ll   MOD  = (1e9+7);
 
 #define Unique(x) x.erase(unique(all(x)), x.end())
 
-#define f(X, Y, Z) for(int i = (X); i < (Y); i += (Z))
 #define print(arr) for(auto &it:(arr)) cout << it << " "; cout << endL;
 #define yes     cout << "YES\n"
 #define no      cout << "NO\n"
